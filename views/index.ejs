@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filez R Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid !direction !spacing">
+        <p><h1>One stop shop for file uploading!</h1></p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" name='sampleFile' id="inputGroupFile01" multiple accept="audio/*, video/*, image/*, .txt, application/msword, .doc, .docx">
+            </div>
+            <button class="btn btn-dark">Upload</button>
+        </form>
+        <p><h2>I have to make clear that when you press Upload and it starts refreshing, it means it is uploading so please, do not cancel the refresh.</h2></p>
+        <p><pre>You can upload: Audio {all types}, Images {all types}, Text {.txt}, MS-Word {all types(?)}, .DOC {.docx}</pre></p>
+
+        <h1>Download Files</h1>
+        <form action="/Download" method="POST" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name='fileNamee' id="fileNamee" placeholder="File Name (incl. file extenstion)">
+            </div>
+            <button class="btn btn-dark">Download</button>
+        </form>
+    </div>
+</body>
+</html>
